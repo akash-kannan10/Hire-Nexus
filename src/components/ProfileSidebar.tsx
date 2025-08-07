@@ -283,24 +283,26 @@ const ProfileSidebar = ({ isOpen, onClose, onLogout }: ProfileSidebarProps) => {
 
                 <div>
                   <Label>Years of Experience</Label>
-                  <Select
-                    value={userData.experience}
-                    onValueChange={(value) =>
-                      setUserData((prev) => ({ ...prev, experience: value }))
-                    }
-                    disabled={!isEditing}
-                  >
-                    <SelectTrigger className="mt-1">
-                      <SelectValue placeholder="Select experience level" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="0-1">0-1 years</SelectItem>
-                      <SelectItem value="1-3">1-3 years</SelectItem>
-                      <SelectItem value="3-5">3-5 years</SelectItem>
-                      <SelectItem value="5-10">5-10 years</SelectItem>
-                      <SelectItem value="10+">10+ years</SelectItem>
-                    </SelectContent>
-                  </Select>
+                  <div className="mt-2">
+                    <Select
+                      value={userData.experience}
+                      onValueChange={(value) =>
+                        setUserData((prev) => ({ ...prev, experience: value }))
+                      }
+                      disabled={!isEditing}
+                    >
+                      <SelectTrigger className="mt-1">
+                        <SelectValue placeholder="Select experience level" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="0-1">0-1 years</SelectItem>
+                        <SelectItem value="1-3">1-3 years</SelectItem>
+                        <SelectItem value="3-5">3-5 years</SelectItem>
+                        <SelectItem value="5-10">5-10 years</SelectItem>
+                        <SelectItem value="10+">10+ years</SelectItem>
+                      </SelectContent>
+                    </Select>
+                  </div>
                 </div>
 
                 {/* Portfolio Section */}
