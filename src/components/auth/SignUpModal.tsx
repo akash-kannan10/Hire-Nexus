@@ -567,25 +567,27 @@ const SignUpModal = ({ isOpen, onClose, onSuccess }: SignUpModalProps) => {
 
                     <div>
                       <Label htmlFor="experience">Years of Experience</Label>
-                      <Select
-                        onValueChange={(value) =>
-                          setFormData((prev) => ({
-                            ...prev,
-                            experience: value,
-                          }))
-                        }
-                      >
-                        <SelectTrigger>
-                          <SelectValue placeholder="Select experience level" />
-                        </SelectTrigger>
-                        <SelectContent>
-                          <SelectItem value="0-1">0-1 years</SelectItem>
-                          <SelectItem value="1-3">1-3 years</SelectItem>
-                          <SelectItem value="3-5">3-5 years</SelectItem>
-                          <SelectItem value="5-10">5-10 years</SelectItem>
-                          <SelectItem value="10+">10+ years</SelectItem>
-                        </SelectContent>
-                      </Select>
+                      <div className="mt-2">
+                        <Select
+                          onValueChange={(value) =>
+                            setFormData((prev) => ({
+                              ...prev,
+                              experience: value,
+                            }))
+                          }
+                        >
+                          <SelectTrigger>
+                            <SelectValue placeholder="Select experience level" />
+                          </SelectTrigger>
+                          <SelectContent>
+                            <SelectItem value="0-1">0-1 years</SelectItem>
+                            <SelectItem value="1-3">1-3 years</SelectItem>
+                            <SelectItem value="3-5">3-5 years</SelectItem>
+                            <SelectItem value="5-10">5-10 years</SelectItem>
+                            <SelectItem value="10+">10+ years</SelectItem>
+                          </SelectContent>
+                        </Select>
+                      </div>
                     </div>
 
                     <div>
