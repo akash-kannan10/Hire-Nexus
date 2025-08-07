@@ -283,7 +283,7 @@ const ProfileSidebar = ({ isOpen, onClose, onLogout }: ProfileSidebarProps) => {
 
                 <div>
                   <Label>Years of Experience</Label>
-                  <div className="mt-2">
+                  <div>
                     <Select
                       value={userData.experience}
                       onValueChange={(value) =>
@@ -291,7 +291,7 @@ const ProfileSidebar = ({ isOpen, onClose, onLogout }: ProfileSidebarProps) => {
                       }
                       disabled={!isEditing}
                     >
-                      <SelectTrigger className="mt-1">
+                      <SelectTrigger className="mt-2">
                         <SelectValue placeholder="Select experience level" />
                       </SelectTrigger>
                       <SelectContent>
